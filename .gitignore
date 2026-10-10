@@ -1,0 +1,43 @@
+# ================= 依赖 =================
+node_modules/
+__pycache__/
+
+# ================= 构建产物 =================
+dist/
+dist-ssr/
+*.local
+
+# Rust / Tauri 构建缓存
+src-tauri/target/
+artifacts/
+target/
+
+# ================= 编辑器 =================
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ================= 系统 =================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ================= 运行时数据 =================
+# 用户配置与图标缓存（不应进版本控制）
+data/
+src-tauri/data/
+startup.log
+*.log
+
+# ================= 测试产物 =================
+artifacts/icon_test/
+
+# ================= 本地环境 =================
+.env
+.env.local
+.env.*.local

@@ -1,0 +1,73 @@
+/**
+ * 设计变量（design tokens）
+ * 见 docs/01-产品需求规格.md FR-6 外观自定义
+ */
+
+:root {
+  /* ---------- 尺寸 ---------- */
+  --radius-panel: 12px;
+  --radius-item: 8px;
+  --radius-sm: 4px;
+
+  --icon-size: 48px;
+  --icon-gap: 12px;
+
+  /* ---------- 动效 ---------- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 120ms;
+  --dur-normal: 200ms;
+  --dur-slow: 320ms;
+
+  /* ---------- 强调色 ---------- */
+  --accent: #0a84ff;
+  --accent-hover: #3d9bff;
+  --accent-dim: rgba(10, 132, 255, 0.18);
+
+  /* ---------- 面板不透明度（由 JS 动态覆盖）---------- */
+  --panel-opacity: 0.85;
+  --bg-dim: 0.3;
+
+  /* ---------- 层级 ---------- */
+  --z-content: 1;
+  --z-tabs: 10;
+  --z-menu: 100;
+  --z-overlay: 200;
+}
+
+/* ================= 深色主题（默认） ================= */
+:root,
+:root[data-theme='dark'] {
+  --fg: rgba(255, 255, 255, 0.92);
+  --fg-secondary: rgba(255, 255, 255, 0.62);
+  --fg-tertiary: rgba(255, 255, 255, 0.38);
+
+  --surface: rgba(28, 28, 32, var(--panel-opacity));
+  --surface-hover: rgba(255, 255, 255, 0.08);
+  --surface-active: rgba(255, 255, 255, 0.14);
+
+  --border: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.18);
+
+  --shadow-menu: 0 8px 32px rgba(0, 0, 0, 0.5);
+
+  --scrollbar: rgba(255, 255, 255, 0.18);
+}
+
+/* ================= 浅色主题 ================= */
+:root[data-theme='light'] {
+  --fg: rgba(0, 0, 0, 0.9);
+  --fg-secondary: rgba(0, 0, 0, 0.6);
+  --fg-tertiary: rgba(0, 0, 0, 0.38);
+
+  --surface: rgba(248, 248, 250, var(--panel-opacity));
+  --surface-hover: rgba(0, 0, 0, 0.05);
+  --surface-active: rgba(0, 0, 0, 0.1);
+
+  --border: rgba(0, 0, 0, 0.1);
+  --border-strong: rgba(0, 0, 0, 0.18);
+
+  --shadow-menu: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+  --scrollbar: rgba(0, 0, 0, 0.2);
+}
